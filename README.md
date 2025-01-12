@@ -1,93 +1,39 @@
-# Lethal Company Mod Template
+# ~Virtual Insanity (BETA)~
 
-Thank you for using the mod template! Here are a few tips to help you on your journey:
+## Changes :
 
-## Versioning
+### Elevator Changes
+The elevator has a 10% chance of breaking down and killing any player near it
 
-BepInEx uses [semantic versioning, or semver](https://semver.org/), for the mod's version info.
-To increment it, you can either modify the version tag in the `.csproj` file directly, or use your IDE's UX to increment the version. Below is an example of modifying the `.csproj` file directly:
+### Old Bird Changes
+Missile machine gun, firerate is now 0.1
 
-```xml
-<!-- BepInEx Properties -->
-<PropertyGroup>
-    <AssemblyName>justsunnit.virtual_insanity</AssemblyName>
-    <Product>VirtualInsanity</Product>
-    <!-- Change to whatever version you're currently on. -->
-    <Version>1.0.0</Version>
-</PropertyGroup>
-```
+### Snare Flea Changes
+Snare fleas oneshot
 
-Your IDE will have the setting in `Package` or `NuGet` under `General` or `Metadata`, respectively.
+### Barber Changes
+Time between hops to 1
 
-## Logging
+### Thumper Changes
+They are faster
 
-A logger is provided to help with logging to the console.
-You can access it by doing `Plugin.Logger` in any class outside the `Plugin` class.
+### Jester Changes
+Wind up time is 1-5 seconds
 
-***Please use*** `LogDebug()` ***whenever possible, as any other log method
-will be displayed to the console and potentially cause performance issues for users.***
+### Maneater Changes
+Become adults on spawn (Going to change)
 
-If you chose to do so, make sure you change the following line in the `BepInEx.cfg` file to see the Debug messages:
+### Hydroneer Changes
+Cannot be calmed
 
-```toml
-[Logging.Console]
+### Coil Head Patches
+Reverts the rework so the head never coils inward
 
-# ... #
+### Player Changes
+- Players die on exhuastion
+- Player is perma-drunk
+- Player dies on max insanity
+- Water Kills you
 
-## Which log levels to show in the console output.
-# Setting type: LogLevel
-# Default value: Fatal, Error, Warning, Message, Info
-# Acceptable values: None, Fatal, Error, Warning, Message, Info, Debug, All
-# Multiple values can be set at the same time by separating them with , (e.g. Debug, Warning)
-LogLevels = All
-```
-
-## Harmony
-
-This template uses harmony. For more specifics on how to use it, look at
-[the HarmonyX GitHub wiki](https://github.com/BepInEx/HarmonyX/wiki) and
-[the Harmony docs](https://harmony.pardeike.net/).
-
-To make a new harmony patch, just use `[HarmonyPatch]` before any class you make that has a patch in it.
-
-Then in that class, you can use
-`[HarmonyPatch(typeof(ClassToPatch), "MethodToPatch")]`
-where `ClassToPatch` is the class you're patching (ie `TVScript`), and `MethodToPatch` is the method you're patching (ie `SwitchTVLocalClient`).
-
-Then you can use
-[the appropriate prefix, postfix, transpiler, or finalizer](https://harmony.pardeike.net/articles/patching.html) attribute.
-
-_While you can use_ `return false;` _in a prefix patch,
-it is **HIGHLY DISCOURAGED** as it can **AND WILL** cause compatibility issues with other mods._
-
-For example, we want to add a patch that will debug log the current players' position.
-We have the following postfix patch patching the `SwitchTVLocalClient` method
-in `TVScript`:
-
-```csharp
-using HarmonyLib;
-
-namespace VirtualInsanity.Patches;
-
-[HarmonyPatch(typeof(TVScript))]
-public class ExampleTVPatch
-{
-    [HarmonyPatch("SwitchTVLocalClient")]
-    [HarmonyPrefix]
-    private static void SwitchTvPrefix(TVScript __instance)
-    {
-        /*
-         *  When the method is called, the TV will be turning off when we want to
-         *  turn the lights on and vice-versa. At that time, the TV's tvOn field
-         *  will be the opposite of what it's doing, ie it'll be on when turning off.
-         *  So, we want to set the lights to what the tv's state was
-         *  when this method is called.
-         */
-        StartOfRound.Instance.shipRoomLights.SetShipLightsBoolean(__instance.tvOn);
-    }
-}
-```
-
-In this case we include the type of the class we're patching in the attribute
-before our `ExampleTVPatch` class,
-as our class will only patch the `TVScript` class.
+### Weather Changes
+All moons are eclipsed
