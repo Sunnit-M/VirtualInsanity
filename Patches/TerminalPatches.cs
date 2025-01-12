@@ -15,8 +15,6 @@ public class TerminalPatches
         foreach (SelectableLevel level in __instance.moonsCatalogueList)
         {
             level.currentWeather = LevelWeatherType.Eclipsed;
-            level.maxEnemyPowerCount = 40;
-            level.maxOutsideEnemyPowerCount = 60;
         }
     }
 }

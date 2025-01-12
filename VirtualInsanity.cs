@@ -34,11 +34,13 @@ public class VirtualInsanity : BaseUnityPlugin
         Harmony.PatchAll(typeof(BarberPatches));
         Harmony.PatchAll(typeof(TerminalPatches));
         Harmony.PatchAll(typeof(CoilHeadPatches));
-        Harmony.PatchAll(typeof(ThumperPatches));
         Harmony.PatchAll(typeof(RoundPatches));
         Harmony.PatchAll(typeof(SickAssRobot));
         Harmony.PatchAll(typeof(SnareFleaPatches));
         Harmony.PatchAll(typeof(BabyPatches));
+        Harmony.PatchAll(typeof(deezNutcrackerPatches));
+        Harmony.PatchAll(typeof(TimeODay));
+        Harmony.PatchAll(typeof(ThumperPatches));
         
         Logger.LogDebug("Finished patching!");
     }
