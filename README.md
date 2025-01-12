@@ -36,5 +36,5 @@ Reverts the rework so the head never coils inward
 They very fast
 
 ### Weather Changes
-All moons are eclipsed
-Always Meteor
+- All moons are eclipsed
+- Always Meteor
