@@ -32,9 +32,9 @@ Reverts the rework so the head never coils inward
 - Player dies on max insanity
 - Water Kills you
 
+### Nutcraker Changes
+They very fast
+
 ### Weather Changes
 All moons are eclipsed
 Always Meteor
-
-### Nutcraker Changes
-They very fast
