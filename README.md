@@ -14,11 +14,14 @@ Snare fleas one-shot
 ### Barber Changes
 Time between hops to 1
 
+### Thumper Changes
+They are faster
+
 ### Jester Changes
 Wind up time is 1-5 seconds
 
 ### Maneater Changes
-Become adults on spawn
+Become adults on spawn (Going to change)
 
 ### Hydroneer Changes
 Cannot be calmed
@@ -34,8 +37,3 @@ Reverts the rework so the head never coils inward
 
 ### Weather Changes
 All moons are eclipsed
-Always Meteor
-
-### Nutcraker Changes
-They very fast
-
