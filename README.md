@@ -1,4 +1,4 @@
-# ~Virtual Insanity (BETA)~
+# Virtual Insanity (BETA)
 
 ## Changes :
 
