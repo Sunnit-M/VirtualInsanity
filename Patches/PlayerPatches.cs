@@ -28,7 +28,7 @@ public class PlayerPatches
             __instance.KillPlayer(new Vector3(0,0,0));
         }
         
-        //__instance.drunkness = 0.25f;
+        //__instance.drunkness = 0.25f;-
 
         playerInFacilty = __instance.isInsideFactory;
     }
