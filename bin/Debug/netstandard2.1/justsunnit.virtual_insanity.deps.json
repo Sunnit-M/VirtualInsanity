@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "justsunnit.virtual_insanity/0.1.0": {
+      "justsunnit.virtual_insanity/0.2.5": {
         "dependencies": {
           "BepInEx.Analyzers": "1.0.8",
           "BepInEx.AssemblyPublicizer.MSBuild": "0.4.2",
@@ -399,7 +399,7 @@
     }
   },
   "libraries": {
-    "justsunnit.virtual_insanity/0.1.0": {
+    "justsunnit.virtual_insanity/0.2.5": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
