@@ -1,11 +1,15 @@
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using LobbyCompatibility.Attributes;
+using LobbyCompatibility.Enums;
 using VirtualInsanity.Patches;
 
 namespace VirtualInsanity;
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+[BepInDependency("BMX.LobbyCompatibility", BepInDependency.DependencyFlags.HardDependency)]
+[LobbyCompatibility(CompatibilityLevel.Everyone, VersionStrictness.Minor)]
 public class VirtualInsanity : BaseUnityPlugin
 {
     public static VirtualInsanity Instance { get; private set; } = null!;
@@ -40,6 +44,9 @@ public class VirtualInsanity : BaseUnityPlugin
         Harmony.PatchAll(typeof(SnareFleaPatches));
         Harmony.PatchAll(typeof(BabyPatches));
         Harmony.PatchAll(typeof(TimeODay));
+        Harmony.PatchAll(typeof(deezNutcrackerPatches));
+        Harmony.PatchAll(typeof(HudPatches));
+        Harmony.PatchAll(typeof(LeverPatches));
         
         Logger.LogDebug("Finished patching!");
     }

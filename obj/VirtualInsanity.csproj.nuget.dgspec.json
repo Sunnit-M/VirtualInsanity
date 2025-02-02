@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\edwin\\OneDrive\\Documents\\C#\\LC\\VirtualInsanity\\VirtualInsanity.csproj": {
-      "version": "0.2.5",
+      "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\edwin\\OneDrive\\Documents\\C#\\LC\\VirtualInsanity\\VirtualInsanity.csproj",
         "projectName": "justsunnit.virtual_insanity",
@@ -72,6 +72,11 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[*-*, )"
+            },
+            "TeamBMX.LobbyCompatibility": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.*, )"
             },
             "UnityEngine.Modules": {
               "include": "Compile",

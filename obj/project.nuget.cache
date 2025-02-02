@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "S7Bd5Yqjc7E=",
+  "dgSpecHash": "X6OP2uNTT/0=",
   "success": true,
   "projectFilePath": "C:\\Users\\edwin\\OneDrive\\Documents\\C#\\LC\\VirtualInsanity\\VirtualInsanity.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,7 @@
     "C:\\Users\\edwin\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\edwin\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\edwin\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\edwin\\.nuget\\packages\\teambmx.lobbycompatibility\\1.3.0\\teambmx.lobbycompatibility.1.3.0.nupkg.sha512",
     "C:\\Users\\edwin\\.nuget\\packages\\unityengine.modules\\2022.3.9\\unityengine.modules.2022.3.9.nupkg.sha512"
   ],
   "logs": []

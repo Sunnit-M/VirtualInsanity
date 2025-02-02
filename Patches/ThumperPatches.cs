@@ -11,6 +11,6 @@ public class ThumperPatches
     [HarmonyPatch(typeof(CrawlerAI), nameof(CrawlerAI.Update))]
     private static void ThumperPatch(CrawlerAI __instance)
     {
-        __instance.averageVelocity = 5.0f;
+        __instance.agent.acceleration = 10f;
     }
 }

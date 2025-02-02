@@ -656,6 +656,15 @@
           }
         }
       },
+      "TeamBMX.LobbyCompatibility/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/BMX.LobbyCompatibility.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/BMX.LobbyCompatibility.dll": {}
+        }
+      },
       "UnityEngine.Modules/2022.3.9": {
         "type": "package",
         "compile": {
@@ -2702,6 +2711,22 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "TeamBMX.LobbyCompatibility/1.3.0": {
+      "sha512": "6XZUDNJ/7xwu9OGG7OU3vAqhABUHz86v4PUmNYp2dYPa1kgJugMsG0eToqK2EjUlymqMzm5nqNG69+yjy9Owsg==",
+      "type": "package",
+      "path": "teambmx.lobbycompatibility/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "icon_128x128.png",
+        "lib/net472/BMX.LobbyCompatibility.dll",
+        "lib/netstandard2.1/BMX.LobbyCompatibility.dll",
+        "teambmx.lobbycompatibility.1.3.0.nupkg.sha512",
+        "teambmx.lobbycompatibility.nuspec"
+      ]
+    },
     "UnityEngine.Modules/2022.3.9": {
       "sha512": "sSxqZjd05U0NWlX+eappdlsEuXFvDRHkUaClDVTocGRzCmIwNvgGJIPh22lGklIpNZ3cJZneYJkIUnEIazR8VA==",
       "type": "package",
@@ -2918,6 +2943,7 @@
       "BepInEx.Core >= 5.*",
       "BepInEx.PluginInfoProps >= 2.*",
       "LethalCompany.GameLibs.Steam >= *-*",
+      "TeamBMX.LobbyCompatibility >= 1.*",
       "UnityEngine.Modules >= 2022.3.9"
     ]
   },
@@ -2925,7 +2951,7 @@
     "C:\\Users\\edwin\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "0.2.5",
+    "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\edwin\\OneDrive\\Documents\\C#\\LC\\VirtualInsanity\\VirtualInsanity.csproj",
       "projectName": "justsunnit.virtual_insanity",
@@ -2992,6 +3018,11 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[*-*, )"
+          },
+          "TeamBMX.LobbyCompatibility": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.*, )"
           },
           "UnityEngine.Modules": {
             "include": "Compile",
