@@ -39,6 +39,7 @@ public class VirtualInsanity : BaseUnityPlugin
         Harmony.PatchAll(typeof(SickAssRobot));
         Harmony.PatchAll(typeof(SnareFleaPatches));
         Harmony.PatchAll(typeof(BabyPatches));
+        Harmony.PatchAll(typeof(TimeODay));
         
         Logger.LogDebug("Finished patching!");
     }

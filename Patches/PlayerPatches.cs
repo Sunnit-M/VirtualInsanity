@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
+using Dissonance.Config;
 using GameNetcodeStuff;
 using HarmonyLib;
 using UnityEngine;
@@ -28,7 +29,7 @@ public class PlayerPatches
             __instance.KillPlayer(new Vector3(0,0,0));
         }
         
-        __instance.drunkness = 0.25f;
+        __instance.drunkness = 0.5f;
 
         playerInFacilty = __instance.isInsideFactory;
     }
