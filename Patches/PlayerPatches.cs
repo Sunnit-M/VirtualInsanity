@@ -40,7 +40,7 @@ public class PlayerPatches
                     "LC_EclipseTip");
             }
 
-            __instance.drunkness = 0.5f;
+            __instance.drunkness = 0.1f;
 
             playerInFacilty = __instance.isInsideFactory;
 
