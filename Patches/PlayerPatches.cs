@@ -22,22 +22,16 @@ public class PlayerPatches
             if (__instance.isExhausted)
             {
                 __instance.KillPlayer(new Vector3(0, 0, 0));
-                HudPatches.Instance.DisplayTip("Death Reason", "You've Tripped on oxygen", true, false,
-                    "LC_EclipseTip");
             }
 
             if (__instance.insanityLevel >= __instance.maxInsanityLevel)
             {
                 __instance.KillPlayer(new Vector3(0, 0, 0));
-                HudPatches.Instance.DisplayTip("Death Reason", "Went Crazy", true, false,
-                    "LC_EclipseTip");
             }
 
             if (__instance.isUnderwater)
             {
                 __instance.KillPlayer(new Vector3(0, 0, 0));
-                HudPatches.Instance.DisplayTip("Death Reason", "Your a terrible swimmer", true, false,
-                    "LC_EclipseTip");
             }
 
             __instance.drunkness = 0.1f;
@@ -52,8 +46,6 @@ public class PlayerPatches
             if (timeInShip <= 0)
             {
                 __instance.KillPlayer(new Vector3(0, 0, 0));
-                HudPatches.Instance.DisplayTip("Death Reason", "NO LOITERING", true, false,
-                    "LC_EclipseTip");
             }
         }
         else if (RoundPatches.ShipPhase)
