@@ -11,6 +11,6 @@ public class BarberPatches
     [HarmonyPostfix]
     private static void BarberPatch(ClaySurgeonAI __instance)
     {
-        __instance.currentInterval = 1f;
+        if(VirtualInsanity.Config.ConfigurationEnabled.Value && VirtualInsanity.Config.BarberChangesEnabled.Value)__instance.currentInterval = 1f;
     }
 }

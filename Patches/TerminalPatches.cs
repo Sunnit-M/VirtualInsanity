@@ -12,11 +12,14 @@ public class TerminalPatches
     [HarmonyPostfix]
     private static void ApplyMoonWeather(ref Terminal __instance)
     {
-        foreach (SelectableLevel level in __instance.moonsCatalogueList)
+        if (VirtualInsanity.Config.ConfigurationEnabled.Value && VirtualInsanity.Config.EclipseEnabled.Value)
         {
-            level.currentWeather = LevelWeatherType.Eclipsed;
-            level.maxEnemyPowerCount = 40;
-            level.maxOutsideEnemyPowerCount = 60;
+            foreach (SelectableLevel level in __instance.moonsCatalogueList)
+            {
+                level.currentWeather = LevelWeatherType.Eclipsed;
+                level.maxEnemyPowerCount = 40;
+                level.maxOutsideEnemyPowerCount = 60;
+            }
         }
     }
 }

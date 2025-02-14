@@ -11,6 +11,9 @@ public class ThumperPatches
     [HarmonyPatch(typeof(CrawlerAI), nameof(CrawlerAI.Update))]
     private static void ThumperPatch(CrawlerAI __instance)
     {
-        __instance.agent.acceleration = 10f;
+        if (VirtualInsanity.Config.ConfigurationEnabled.Value && VirtualInsanity.Config.ThumperChangesEnabled.Value)
+        {
+            __instance.agent.acceleration = 10f;
+        }
     }
 }

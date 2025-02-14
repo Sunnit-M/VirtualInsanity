@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\edwin\\OneDrive\\Documents\\C#\\LC\\VirtualInsanity\\VirtualInsanity.csproj": {
-      "version": "1.0.0",
+      "version": "1.1.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\edwin\\OneDrive\\Documents\\C#\\LC\\VirtualInsanity\\VirtualInsanity.csproj",
         "projectName": "justsunnit.virtual_insanity",
@@ -72,6 +72,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[*-*, )"
+            },
+            "Sigurd.BepInEx.CSync": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             },
             "TeamBMX.LobbyCompatibility": {
               "suppressParent": "All",

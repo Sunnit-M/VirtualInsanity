@@ -11,6 +11,6 @@ public class CoilHeadPatches
     [HarmonyPostfix]
     private static void CoilHeadPatch(SpringManAI __instance)
     {
-        __instance.loseAggroTimer = 0;
+        if(VirtualInsanity.Config.ConfigurationEnabled.Value && VirtualInsanity.Config.CoilChangesEnabled.Value) {__instance.loseAggroTimer = 0;}
     }
 }

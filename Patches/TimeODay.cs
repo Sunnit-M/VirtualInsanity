@@ -28,7 +28,7 @@ public class TimeODay
         Debug.Log((object) string.Format("Randomizer amount after: {0}", (object) time));
         float num4 = (float) ((double) __instance.quotaVariables.baseIncrease * (double) num2 * ((double) __instance.quotaVariables.randomizerCurve.Evaluate(time) * (double) __instance.quotaVariables.randomizerMultiplier + 1.0));
         Debug.Log((object) string.Format("Amount to increase quota:{0}", (object) num4));
-        __instance.profitQuota = (int) Mathf.Clamp((float) __instance.profitQuota + num4, 0.0f, 1E+09f) * 2;
+        __instance.profitQuota = (int) Mathf.Clamp((float) __instance.profitQuota + num4, 0.0f, 1E+09f) * VirtualInsanity.Config.QuotaMultiplier.Value;
         __instance.quotaFulfilled = 0;
         __instance.timeUntilDeadline = __instance.totalTime * 4f;
         int overtimeBonus = num1 / 5 + 15 * __instance.daysUntilDeadline;

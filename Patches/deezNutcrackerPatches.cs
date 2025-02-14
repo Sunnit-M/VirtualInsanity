@@ -8,7 +8,6 @@ public class deezNutcrackerPatches
     [HarmonyPostfix]
     public static void NutcrakerPatch(NutcrackerEnemyAI __instance)
     {
-        __instance.torsoTurnSpeed = 2500f;
-        __instance.agent.speed = 10f;
+        if(VirtualInsanity.Config.ConfigurationEnabled.Value && VirtualInsanity.Config.NutcrackerChangesEnabled.Value) {__instance.agent.speed = 10f; __instance.torsoTurnSpeed = 2500f;}
     }
 }

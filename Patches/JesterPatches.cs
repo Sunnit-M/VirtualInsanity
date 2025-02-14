@@ -11,6 +11,6 @@ public class JesterPatches
     [HarmonyPostfix]
     private static void JesterPatch(JesterAI __instance)
     {
-        __instance.popUpTimer = UnityEngine.Random.Range(1f, 5f);
+        if(VirtualInsanity.Config.ConfigurationEnabled.Value && VirtualInsanity.Config.JesterChangesEnabled.Value) {__instance.popUpTimer = UnityEngine.Random.Range(1f, 5f);}
     }
 }

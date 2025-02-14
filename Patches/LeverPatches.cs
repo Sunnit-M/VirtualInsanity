@@ -8,7 +8,7 @@ public class LeverPatches
     [HarmonyPrefix]
     public static void LeverPatch(StartMatchLever __instance)
     {
-        if (__instance.playersManager.shipHasLanded)
+        if (__instance.playersManager.shipHasLanded && VirtualInsanity.Config.ConfigurationEnabled.Value && VirtualInsanity.Config.CanPullLever.Value)
         {
             if (RoundPatches.currentlevel.planetHasTime)
             {

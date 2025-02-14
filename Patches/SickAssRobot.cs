@@ -8,6 +8,6 @@ public class SickAssRobot
     [HarmonyPostfix]
     private static void Postfix(RadMechAI __instance)
     {
-        __instance.fireRate = 0.1f;
+        if(VirtualInsanity.Config.ConfigurationEnabled.Value && VirtualInsanity.Config.RobotChangesEnabled.Value) {__instance.fireRate = 0.1f;}
     }
 }

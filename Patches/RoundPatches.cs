@@ -10,7 +10,7 @@ public class RoundPatches
     public static int time = 5;
     public static bool tryDeath;
     public static bool elevatorRunning;
-    public static SelectableLevel currentlevel;
+    public static SelectableLevel currentlevel = null!;
 
 
     public static bool ShipPhase;
@@ -25,7 +25,7 @@ public class RoundPatches
         if ((__instance.elevatorTransform.position + __instance.localPlayerController.transform.position).magnitude >=
             5 && __instance.elevatorTransform.position != new Vector3(0,0,0) && tryDeath == false && elevatorRunning && PlayerPatches.playerInFacilty)
         {
-            if (Random.RandomRangeInt(1, 11) == 1)
+            if (Random.RandomRangeInt(1, 11) == 1 && VirtualInsanity.Config.ConfigurationEnabled && VirtualInsanity.Config.ElevatorBreakdownEnabled.Value)
             {
                 __instance.localPlayerController.KillPlayer(new Vector3(0, 0, 0));
                 tryDeath = true;
@@ -45,8 +45,6 @@ public class RoundPatches
     [HarmonyPrefix]
     public static bool StartOfRoundOnShipLandedMiscEventsPatch(StartOfRound __instance)
     {
-        PlayerPatches.Counting = true;
-        PlayerPatches.timeInShip = 150;
         if (TimeOfDay.Instance.currentLevelWeather == LevelWeatherType.Eclipsed)
         {
             int random = Random.RandomRangeInt(1,4);
