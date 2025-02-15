@@ -17,7 +17,7 @@ public class PlayerPatches
     {
         if (!RoundPatches.ShipPhase)
         {
-            if (VirtualInsanity.Config.DieOnExhaustion.Value)
+            if (VirtualInsanity.Config.DieOnExhaustion.Value && __instance.isExhausted)
             {
                 { __instance.KillPlayer(new Vector3(0, 0, 0));}
             }

@@ -5,7 +5,7 @@
         <AssemblyName>justsunnit.virtual_insanity</AssemblyName>
         <Product>VirtualInsanity</Product>
         <!-- Change to whatever version you're currently on. -->
-        <Version>1.1.5</Version>
+        <Version>1.1.6</Version>
     </PropertyGroup>
 
     <!-- Project Properties -->
