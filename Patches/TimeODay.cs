@@ -9,7 +9,7 @@ public class TimeODay
     [HarmonyPostfix]
     public static void MeteorPatch(TimeOfDay __instance)
     {
-        __instance.meteorShowerAtTime = 0.1f;
+        if(VirtualInsanity.Config.MeteorEnabled.Value) {__instance.meteorShowerAtTime = 0.1f;}
     }
 
     [HarmonyPatch(typeof(TimeOfDay), nameof(TimeOfDay.SetNewProfitQuota))]

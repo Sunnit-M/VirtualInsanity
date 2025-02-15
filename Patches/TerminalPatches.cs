@@ -12,7 +12,7 @@ public class TerminalPatches
     [HarmonyPostfix]
     private static void ApplyMoonWeather(ref Terminal __instance)
     {
-        if (VirtualInsanity.Config.ConfigurationEnabled.Value && VirtualInsanity.Config.EclipseEnabled.Value)
+        if (VirtualInsanity.Config.EclipseEnabled.Value)
         {
             foreach (SelectableLevel level in __instance.moonsCatalogueList)
             {

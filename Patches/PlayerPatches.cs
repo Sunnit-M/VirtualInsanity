@@ -17,29 +17,22 @@ public class PlayerPatches
     {
         if (!RoundPatches.ShipPhase)
         {
-            if (__instance.isExhausted && VirtualInsanity.Config.ConfigurationEnabled && VirtualInsanity.Config.DieOnExhaustion.Value)
-            {
-                { __instance.KillPlayer(new Vector3(0, 0, 0));}
-            }
-            {
-                 { __instance.KillPlayer(new Vector3(0, 0, 0));}
-            }
-
-            if (__instance.insanityLevel >= __instance.maxInsanityLevel && VirtualInsanity.Config.ConfigurationEnabled && VirtualInsanity.Config.DieOnInsanity.Value)
+            if (VirtualInsanity.Config.DieOnExhaustion.Value)
             {
                 { __instance.KillPlayer(new Vector3(0, 0, 0));}
             }
 
-            if (__instance.isUnderwater && VirtualInsanity.Config.ConfigurationEnabled && VirtualInsanity.Config.DieOnWater.Value)
+            if (__instance.insanityLevel >= __instance.maxInsanityLevel && VirtualInsanity.Config.DieOnInsanity.Value)
+            {
+                { __instance.KillPlayer(new Vector3(0, 0, 0));}
+            }
+
+            if (__instance.isUnderwater && VirtualInsanity.Config.DieOnWater.Value)
             {
                 __instance.KillPlayer(new Vector3(0, 0, 0));
             }
             
-            if(VirtualInsanity.Config.ConfigurationEnabled) { __instance.drunkness = VirtualInsanity.Config.Drunkness.Value;}
-            else
-            {
-                __instance.drunkness = 0.2f;
-            }
+            __instance.drunkness = VirtualInsanity.Config.Drunkness.Value;
 
             playerInFacilty = __instance.isInsideFactory;
             

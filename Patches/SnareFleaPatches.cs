@@ -8,6 +8,6 @@ public class SnareFleaPatches
     [HarmonyPostfix]
     private static void CentipedePatch(CentipedeAI __instance)
     {
-        if(VirtualInsanity.Config.ConfigurationEnabled.Value && VirtualInsanity.Config.SnareChangesEnabled.Value) {__instance.damagePlayerInterval = 0f;}
+        if(VirtualInsanity.Config.SnareChangesEnabled.Value) {__instance.damagePlayerInterval = 0f;}
     }
 }

@@ -78,7 +78,6 @@ public class VirtualInsanity : BaseUnityPlugin
 public class VirtualInsanityConfig : SyncedConfig2<VirtualInsanityConfig>
 {
     // Config Entries
-    [SyncedEntryField] public SyncedEntry<bool> ConfigurationEnabled;
     [SyncedEntryField] public SyncedEntry<bool> DieOnExhaustion;
     [SyncedEntryField] public SyncedEntry<bool> DieOnWater;
     [SyncedEntryField] public SyncedEntry<bool> DieOnInsanity;
@@ -100,8 +99,6 @@ public class VirtualInsanityConfig : SyncedConfig2<VirtualInsanityConfig>
 
     public VirtualInsanityConfig(ConfigFile cfg) : base(MyPluginInfo.PLUGIN_GUID)
     {
-        ConfigurationEnabled =
-            cfg.BindSyncedEntry("Misc", "Configuration Enabled", true, "Enable or disable the configuration.");
         DieOnExhaustion = cfg.BindSyncedEntry("Player", "Die On Exhaustion", true, "Player dies upon exhaustion.");
         DieOnWater = cfg.BindSyncedEntry("Player", "Die On Water Contact", true, "Player dies upon water contact.");
         DieOnInsanity = cfg.BindSyncedEntry("Player", "Die On Max Insanity", true,

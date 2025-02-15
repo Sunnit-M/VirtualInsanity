@@ -11,6 +11,6 @@ public class BlobPatches
     [HarmonyPostfix]
     private static void BlobPatch(BlobAI __instance)
     {
-        if(VirtualInsanity.Config.ConfigurationEnabled.Value && VirtualInsanity.Config.BlobChangesEnabled.Value) {__instance.tamedTimer = 0;}
+        if(VirtualInsanity.Config.BlobChangesEnabled.Value) {__instance.tamedTimer = 0;}
     }
 }

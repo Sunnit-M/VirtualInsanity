@@ -25,7 +25,7 @@ public class RoundPatches
         if ((__instance.elevatorTransform.position + __instance.localPlayerController.transform.position).magnitude >=
             5 && __instance.elevatorTransform.position != new Vector3(0,0,0) && tryDeath == false && elevatorRunning && PlayerPatches.playerInFacilty)
         {
-            if (Random.RandomRangeInt(1, 11) == 1 && VirtualInsanity.Config.ConfigurationEnabled && VirtualInsanity.Config.ElevatorBreakdownEnabled.Value)
+            if (Random.RandomRangeInt(1, 11) == 1 && VirtualInsanity.Config.ElevatorBreakdownEnabled.Value)
             {
                 __instance.localPlayerController.KillPlayer(new Vector3(0, 0, 0));
                 tryDeath = true;
